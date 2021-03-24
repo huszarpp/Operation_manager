@@ -39,6 +39,7 @@ class Deserializer(object):
                     task_calc_object_dict[task].append(Calculation(calc_dict["id"],
                                                         calc_dict["variable1"],
                                                         calc_dict["variable2"],
+                                                        calc_dict["operation"],
                                                         calc_dict["variable2-type"]
                                                         if "variable2_type" in calc_dict
                                                         else None)
