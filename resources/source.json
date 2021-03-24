@@ -1,0 +1,84 @@
+[
+  {
+    "task1": [
+      {
+        "id": "11",
+        "variable1": "257.5",
+        "variable2": "160.2",
+        "operation": "plus"
+      },
+      {
+        "id": "12",
+        "variable1": "234.4",
+          "variable2": "149",
+        "operation": "minus"
+      },
+      {
+        "id": "13",
+        "variable1": "0",
+        "variable2": "301",
+        "operation": "div"
+      },
+      {
+        "id": "14",
+        "variable1": "280",
+        "variable2": "0",
+        "operation": "multi"
+      },
+      {
+        "id": "15",
+        "variable1": "2021-03-19 11:54:31",
+        "variable2": "2",
+        "operation": "minus",
+        "variable2-type": "day"
+      },
+      {
+        "id": "16",
+        "variable1": "100",
+        "variable2": "33.3",
+        "operation": "div"
+      }
+    ]
+  },
+  {
+    "task2": [
+      {
+        "id": "21",
+        "variable1": "A2",
+        "variable2": "323.2",
+        "operation": "plus"
+      },
+      {
+        "id": "22",
+        "variable1": "210",
+        "variable2": "B",
+        "operation": "minus"
+      },
+      {
+        "id": "23",
+        "variable1": "5282",
+        "variable2": "0",
+        "operation": "div"
+      },
+      {
+        "id": "24",
+        "variable1": "223.5",
+        "variable2": "7612.2",
+        "operation": "multi"
+      },
+      {
+        "id": "25",
+        "variable1": "2871",
+        "variable2": "2!",
+        "operation": "minus"
+      },
+      {
+        "id": "26",
+        "variable1": "2021-03-19 11:54:31",
+        "variable2": "3600",
+        "operation": "plus",
+        "variable2-type": "sec"
+      }
+    ]
+  }
+]
