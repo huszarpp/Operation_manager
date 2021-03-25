@@ -1,7 +1,6 @@
 import datetime
 
 from src.logger_utils.logger import Logger
-from src.calculation_utils.task_manager import TaskManager
 
 
 class Calculation(object):
