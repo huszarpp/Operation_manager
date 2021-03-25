@@ -1,17 +1,21 @@
+import sys
 
 
 class TaskManager(object):
 
-    filename_to_log = None
+    def __init__(self, task_calculationlist_dict):
+        self.task_calculationlist_dict = task_calculationlist_dict
 
-    @staticmethod
-    def set_filename_to_log(filename):
-        TaskManager.filename_to_log = filename
+    def get_task_calculationlist_dict(self):
+        return self.task_calculationlist_dict.copy()
 
-    @staticmethod
-    def execute_all_task(task_calculationlist_dict):
-        for task, calculation_list in task_calculationlist_dict.items():
-            current_task = task_calculationlist_dict[task]
-            for calculation in current_task:
-                calculation.calculate()
-                print(calculation.result)
+    def execute_all_task(self):
+        if self.task_calculationlist_dict is None:
+            print("Task Manager: missing data!")
+            sys.exit()
+        else:
+            for task, calculation_list in self.task_calculationlist_dict.items():
+                current_task = self.task_calculationlist_dict[task]
+                for calculation in current_task:
+                    calculation.calculate()
+                    print(calculation.result)
