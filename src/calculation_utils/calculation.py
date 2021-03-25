@@ -1,5 +1,8 @@
 import datetime
 
+from src.logger_utils.logger import Logger
+from src.calculation_utils.task_manager import TaskManager
+
 
 class Calculation(object):
 
@@ -61,3 +64,11 @@ class Calculation(object):
         else:
             self.is_valid_operation = False
             self.result = "No result! Cause: Illegal operator!"
+        if self.is_valid_operation and int(self.result) == 85:
+            self.log_to_file()
+
+    def log_to_file(self):
+        if (TaskManager.filename_to_log is not None):
+            Logger.log_into_file(TaskManager.filename_to_log, self.__id, self.result)
+
+
