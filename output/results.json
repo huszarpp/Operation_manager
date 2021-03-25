@@ -1,0 +1,14 @@
+{
+    {"id": 11, "result": 417.7},
+    {"id": 12, "result": 85.4},
+    {"id": 13, "result": 0.0},
+    {"id": 14, "result": 0.0},
+    {"id": 15, "result": 2021-03-17 11:54:31},
+    {"id": 16, "result": 3.0},
+    {"id": 21, "result": No result! Cause: Illegal operand type!},
+    {"id": 22, "result": No result! Cause: Illegal operand type!},
+    {"id": 23, "result": No result! Cause: Division by Zero!},
+    {"id": 24, "result": 1701326.7},
+    {"id": 25, "result": No result! Cause: Illegal operand type!},
+    {"id": 26, "result": 2021-03-19 12:54:31},
+}
