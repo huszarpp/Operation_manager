@@ -57,6 +57,7 @@ class Calculation(object):
         elif self.operator == 'div':
             if self.variable2 != 0:
                 self.result = self.variable1 / self.variable2
+                self.result = round(self.result, 1)
             else:
                 self.is_valid_operation = False
                 self.result = "No result! Cause: Division by Zero!"
