@@ -6,37 +6,31 @@ from src.calculation_utils.calculation import Calculation
 
 class Deserializer(object):
 
-    resource_json_url = None
+    def __init__(self, resource_json_url):
+        self.resource_json_url = resource_json_url
 
-    @staticmethod
-    def set_resource_json_url(url):
-        Deserializer.resource_json_url = url
-
-    @staticmethod
-    def deserialize_json_file():
-        json_string_from_file = Deserializer.read_json_file()
+    def deserialize_json_file(self):
+        json_string_from_file = self.read_json_file()
         if json_string_from_file is not None:
             try:
                 decoded_json = json.loads(json_string_from_file)
-                calculation_object_list = Deserializer.create_calculation_objects_from_decoded_json(decoded_json)
-                return calculation_object_list
+                task_calc_object_dict = self.create_calculation_objects_from_decoded_json(decoded_json)
+                return task_calc_object_dict
             except JSONDecodeError:
                 print("Incorrect JSON format")
 
         return None
 
-    @staticmethod
-    def read_json_file():
+    def read_json_file(self):
         try:
-            f = open(Deserializer.resource_json_url, "r")
+            f = open(self.resource_json_url, "r")
             json_string = (f.read())
             return json_string
         except OSError:
             print("File reading problem has occurred!")
             return None
 
-    @staticmethod
-    def create_calculation_objects_from_decoded_json(decoded_json):
+    def create_calculation_objects_from_decoded_json(self, decoded_json):
         task_calc_object_dict = {}
         for task_dict in decoded_json:
             for task, calc_list in task_dict.items():
