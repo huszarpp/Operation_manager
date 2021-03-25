@@ -6,9 +6,15 @@ from src.calculation_utils.calculation import Calculation
 
 class Deserializer(object):
 
+    resource_json_url = None
+
     @staticmethod
-    def deserialize_json_file(resource_url):
-        json_string_from_file = Deserializer.read_json_file(resource_url)
+    def set_resource_json_url(url):
+        Deserializer.resource_json_url = url
+
+    @staticmethod
+    def deserialize_json_file():
+        json_string_from_file = Deserializer.read_json_file()
         if json_string_from_file is not None:
             try:
                 decoded_json = json.loads(json_string_from_file)
@@ -20,13 +26,13 @@ class Deserializer(object):
         return None
 
     @staticmethod
-    def read_json_file(resource_url):
+    def read_json_file():
         try:
-            f = open(resource_url, "r")
+            f = open(Deserializer.resource_json_url, "r")
             json_string = (f.read())
             return json_string
         except OSError:
-            print("File reading problem has occured!")
+            print("File reading problem has occurred!")
             return None
 
     @staticmethod
