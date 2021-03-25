@@ -41,7 +41,7 @@ class Deserializer(object):
                                                         calc_dict["variable2"],
                                                         calc_dict["operation"],
                                                         calc_dict["variable2-type"]
-                                                        if "variable2_type" in calc_dict
+                                                        if "variable2-type" in calc_dict
                                                         else None)
                                             )
         return task_calc_object_dict
